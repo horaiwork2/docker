@@ -30,7 +30,11 @@ docker run -it -p 1234:8080 tomcat
 docker run -it -p 8888:80 nginx
 docker run -d -p 8888:80 nginx
 
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+Интерактивно (-it)
+Отдельно (-d)
+Переопредиление порта (-p)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 docker build -t denis .
 docker images
