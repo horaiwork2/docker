@@ -81,3 +81,27 @@ Kill and Delete Containers and Images
 docker rm -f $(docker ps -aq)        # Delete all Containers
 docker rmi -f $(docker images -q)    # Delete all Images
 
+
+Docker Compose
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Сборка проекта
+docker-compose build
+
+Запуск проекта
+docker-compose up
+
+Останавливать
+docker-compose down
+
+Выводит журналы сервисов
+docker-compose logs -f [service name]
+
+Вывести список контейнеров
+docker-compose ps
+
+Выполнить команду в выполняющемся контейнере
+docker-compose exec [service name] [command]
+
+Вывести список образов
+docker-compose images
