@@ -13,8 +13,17 @@ Docker-образ (Docker-image)
 
 Kill and Delete Containers and Images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Остановка и удаление всех контейнеров
 docker rm -f $(docker ps -aq)        # Delete all Containers
+
+Удаление всех закрытых контейнеров
+docker rm $(docker ps -a -f status=exited -q)
+
+Удаление всех образов
 docker rmi -f $(docker images -q)    # Delete all Images
+
+Удаление контейнера при выходе
+docker run --rm image_name
 
 
 Docker Compose
