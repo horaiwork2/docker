@@ -1,0 +1,76 @@
+~~~~~~~~  PUT - добавить запись ~~~~~~~~
+
+/{$index / ключ}/_doc/{$id}
+{
+    "title": "Get first key",
+    "category": "user",
+    "autor": {
+        "first_name": "Dima",
+        "last_name": "Horai"
+    }
+}
+
+/{$index / ключ}/_doc/{$id}/_create 
+
+{
+    "title": "Get first key",
+    "category": "user",
+    "autor": {
+        "first_name": "Dima",
+        "last_name": "Horai"
+    }
+}
+
+~~~~~~~~  GET - получить запись ~~~~~~~~
+
+/{$index / ключ}/_search
+
+{
+    "took": 3,
+    "timed_out": false,
+    "_shards": {
+        "total": 5,
+        "successful": 5,
+        "skipped": 0,
+        "failed": 0
+    },
+    "hits": {
+        "total": 1,
+        "max_score": 1.0,
+        "hits": [
+            {
+                "_index": "second",
+                "_type": "_doc",
+                "_id": "2",
+                "_score": 1.0,
+                "_source": {
+                    "title": "Get second key",
+                    "category": "user",
+                    "autor": {
+                        "first_name": "Dima",
+                        "last_name": "Horai"
+                    }
+                }
+            }
+        ]
+    }
+}
+
+/{$index / ключ}/_doc/2
+{
+    "_index": "first_key",
+    "_type": "_doc",
+    "_id": "1",
+    "_version": 3,
+    "_seq_no": 2,
+    "_primary_term": 1,
+    "found": true,
+    "_source": {
+        "title": "Get first key",
+        "category": "user",
+        "autor": {
+            "first_name": "Dima",
+            "last_name": "Horai"
+        }
+    }
+}
