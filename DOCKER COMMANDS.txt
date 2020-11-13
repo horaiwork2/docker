@@ -85,5 +85,4 @@ VOLUME — создаёт точку монтирования для работ�
             COMPOSER
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-COMPOSER_MEMORY_LIMIT=-1
+COMPOSER_MEMORY_LIMIT=-1 composer update
