@@ -1,0 +1,3 @@
+MySQL explain for queries in Laravel 8.x
+
+->explain()->dd();
